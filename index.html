@@ -1,49 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-	<meta property="og:title" content="Valar Studio"/>
-	<meta property="og:description" content="Creadores de peluches y llaveros personalizados. Explora nuestro universo digital y forma parte del Santuario."/>
-	<meta property="og:image" content="https://valarstudio.github.io/images/logo.png"/>
-	<meta property="og:url" content="https://valarstudio.github.io"/>
-	<meta property="og:type" content="website"/>
-	<title>Valar Studio</title>
-	<link rel="icon" type="image/x-icon" href="images/icon.png">
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			height: 100vh;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background-color: #5fe3fc;
-			font-family: monospace;
-		}
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta property="og:title" content="Valar Studio"/>
+		<meta property="og:description" content="Peluches y llaveros personalizados. Explora nuestro mundo y forma parte del Santuario."/>
+		<meta property="og:image" content="https://valarstudio.github.io/images/logo.png"/>
+		<meta property="og:url" content="https://valarstudio.github.io"/>
+		<meta property="og:type" content="website"/>
+		<title>Valar Studio</title>
+		<link rel="icon" type="image/x-icon" href="images/icon.png">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="overlay" id="overlay"></div>
+		<aside class="sidebar" id="sidebar">
+			<nav class="sidebar-links">
+				<a href="/catalogo">Catálogo</a>
+				<a href="/novedades">Novedades</a>
+				<a href="/comunidad">Comunidad</a>
+			</nav>
+		</aside>
+		<nav class="topbar">
+			<div class="topbar-left">
+				<button class="menu-btn" id="menuBtn">☰</button>
+				<a href="/">
+					<img src="images/logonobg.png" alt="Valar Studio" class="logo">
+				</a>
+				<div class="desktop-links">
+					<a href="/catalogo">Catálogo</a>
+					<a href="/novedades">Novedades</a>
+					<a href="/comunidad">Comunidad</a>
+				</div>
+				<button class="theme-btn" id="themeBtn" aria-label="Cambiar tema">🌙</button>
+			</div>
+			<div class="topbar-center"></div>
+			<div class="topbar-right">
+				<div class="user-profile" id="userProfile" style="display: none;">
+					<span class="points-display" id="pointsDisplay">Calculando...</span>
+					
+					<a href="/puntos" aria-label="Ir a mis puntos">
+						<img src="images/icon.png" alt="Perfil" class="profile-pic">
+					</a>
+					<button class="logout-btn" id="logoutBtn" title="Cerrar sesión">✖</button>
+				</div>
+				<a href="/puntos" class="login-link" id="loginLink">Ingresar</a>
+			</div>
+		</nav>
+		<main class="main-temp">
+			<img src="images/logonobg.png" alt="Valar" class="logo-temp">
+			<p class="text-temp">¡Estamos trabajando para ti!</p>
+		</main>
+		<script>
+			const menuBtn = document.getElementById('menuBtn');
+			const sidebar = document.getElementById('sidebar');
+			const overlay = document.getElementById('overlay');
+			function toggleMenu() {
+				sidebar.classList.toggle('active');
+				overlay.classList.toggle('active');
+			}
+			menuBtn.addEventListener('click', toggleMenu);
+			overlay.addEventListener('click', toggleMenu);
 
-		.container {
-			text-align: center;
-		}
+			const themeBtn = document.getElementById('themeBtn');
+			const currentTheme = localStorage.getItem('theme');
+			if (currentTheme) {
+				document.documentElement.setAttribute('data-theme', currentTheme);
+				themeBtn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+			}
+			themeBtn.addEventListener('click', () => {
+				let theme = document.documentElement.getAttribute('data-theme');
+				
+				if (theme === 'dark') {
+					document.documentElement.removeAttribute('data-theme');
+					localStorage.setItem('theme', 'light');
+					themeBtn.textContent = '🌙';
+				} else {
+					document.documentElement.setAttribute('data-theme', 'dark');
+					localStorage.setItem('theme', 'dark');
+					themeBtn.textContent = '☀️';
+				}
+			});
 
-		.container img {
-			max-width: 50%;
-			height: auto;
-		}
-
-		.container p {
-			margin-top: 15px;
-			color: #ffffff;
-			font-size: 1.8rem;
-			font-weight: bold;
-		}
-	</style>
-</head>
-
-<body>
-	<div class="container">
-		<img src="images/logonobg.png" alt="¡Estamos trabajando para ti!">
-		<p>¡Estamos trabajando para ti!</p>
-	</div>
+			const userProfile = document.getElementById('userProfile');
+			const loginLink = document.getElementById('loginLink');
+			const pointsDisplay = document.getElementById('pointsDisplay');
+			const logoutBtn = document.getElementById('logoutBtn');
+			const currentUser = localStorage.getItem('valarUser');
+			if (currentUser) {
+				loginLink.style.display = 'none';
+				userProfile.style.display = 'flex';
+			} else {
+				loginLink.style.display = 'block';
+				userProfile.style.display = 'none';
+			}
+			logoutBtn.addEventListener('click', () => {
+				localStorage.removeItem('valarUser');
+				location.reload(); 
+			});
+		</script>
+		<script src="api.js"></script>
 </body>
 </html>
