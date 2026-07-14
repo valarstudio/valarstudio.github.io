@@ -161,7 +161,6 @@ body {
 	width: 100%;
 	max-width: 320px;
 	height: auto;
-	margin-bottom: 25px;
 }
 
 .text-temp {
@@ -181,8 +180,14 @@ body {
 	gap: 12px;
 }
 
-.points-display {
-	font-size: 14px;
+.user-profile-text {
+	display: flex;
+	flex-direction: column;
+	align-items: end;
+}
+
+.points-display, .username-display {
+	font-size: 12px;
 	font-weight: bold;
 	color: var(--text-color);
 }

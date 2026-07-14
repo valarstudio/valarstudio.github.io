@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const userProfile = document.getElementById('userProfile');
 	const loginLink = document.getElementById('loginLink');
 	const pointsDisplay = document.getElementById('pointsDisplay');
+	const usernameDisplay = document.getElementById('usernameDisplay');
 	const currentUser = localStorage.getItem('valarUser');
 
 	if (currentUser) {
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			})
 			.then(data => {
 				if (data.success) {
+					usernameDisplay.textContent = `@${data.username}`;
 					pointsDisplay.textContent = `${data.points} Puntos`;
 				} else {
 					loginLink.style.display = 'block';
