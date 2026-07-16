@@ -11,6 +11,7 @@
 		<title>Valar Studio</title>
 		<link rel="icon" type="image/x-icon" href="images/icon.png">
 		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://valarstudio.github.io/global/variables.css">
 	</head>
 	<body>
 		<div class="overlay" id="overlay"></div>
@@ -23,72 +24,114 @@
 		</aside>
 		<nav class="topbar">
 			<div class="topbar-left">
-				<button class="menu-btn" id="menuBtn">☰</button>
+				<button class="topbar-menu-button" id="menuButton">☰</button>
 				<a href="https://valarstudio.github.io">
-					<img src="images/logonobg.png" alt="Valar Studio" class="logo">
+					<img src="images/logonobg.png" alt="Valar Studio" class="topbar-logo">
 				</a>
-				<div class="desktop-links">
+				<div class="topbar-links">
 					<a href="/catalogo">Catálogo</a>
 					<a href="/novedades">Novedades</a>
 					<a href="/comunidad">Comunidad</a>
 				</div>
-				<button class="theme-btn" id="themeBtn" aria-label="Cambiar tema">🌙</button>
+				<button class="theme-button" id="themeButton" aria-label="Cambiar tema">🌙</button>
 			</div>
 			<div class="topbar-center"></div>
 			<div class="topbar-right">
 				<div class="user-profile" id="userProfile" style="display: none;">
-					<div class="user-profile-text">
-						<span class="username-display" id="usernameDisplay">Bienvenido</span>
-						<span class="points-display" id="pointsDisplay">Calculando...</span>
-					</div>
-					<a href="/puntos" aria-label="Ir a mis puntos">
+					<a href="/puntos" class="profile-link" aria-label="Ir a mis puntos">
+						<div class="user-profile-text">
+							<span class="username-display" id="usernameDisplay">Bienvenido</span>
+							<span class="points-display" id="pointsDisplay">Calculando...</span>
+						</div>
 						<img src="images/icon.png" alt="Perfil" class="profile-pic">
 					</a>
-					<button class="logout-btn" id="logoutBtn" title="Cerrar sesión">✖</button>
+					<button class="logout-button" id="logoutButton" title="Cerrar sesión">✖</button>
 				</div>
 				<a href="/puntos" class="login-link" id="loginLink">Ingresar</a>
 			</div>
 		</nav>
-		<main class="main-temp">
-			<p class="text-temp">Bienvenido</p>
-			<img src="images/logonobg.png" alt="Valar" class="logo-temp">
-			<p class="text-temp">¡Estamos trabajando para ti!</p>
+		<main class="content">
+			<div class="banner-padding"></div>
+			<section class="banner-section">
+				<div class="banner-container">
+					<div class="banner-media">
+						<img src="images/logonobg.png" class="banner-avatar">
+					</div>
+					<div class="banner-content">
+						<h1 class="banner-title">Te damos la bienvenida a<br><span class="highlight">Valar Studio</span></h1>
+						<p class="banner-subtitle">¡Estamos trabajando para ti!
+						<div class="banner-actions">
+							<a href="/catalogo" class="button-primary">EXPLORAR EL SITIO</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div class="banner-padding"></div>
 		</main>
+		<footer class="main-footer">
+			<div class="footer-container">
+				<div class="footer-socials">
+					<a href="https://instagram.com/valar.mx" target="_blank" rel="noopener" aria-label="Instagram de Valar Studio">
+						<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+							<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+							<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+						</svg>
+					</a>
+					<a href="https://tiktok.com/@valar.mx" target="_blank" rel="noopener" aria-label="TikTok de Valar Studio">
+						<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+						</svg>
+					</a>
+					<a href="https://github.com/valarstudio" target="_blank" rel="noopener" aria-label="GitHub de Valar Studio">
+						<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+						</svg>
+					</a>
+				</div>
+				<div class="footer-links">
+					<a href="/terminos" class="footer-link">Términos</a>
+					<span class="footer-separator">•</span>
+					<a href="mailto:valarstudiomx@gmail.com" class="footer-link">Contacto</a>
+				</div>
+				<div class="footer-copy">
+					<p>© 2026 Valar Studio</p>
+				</div>
+			</div>
+		</footer>
 		<script>
-			const menuBtn = document.getElementById('menuBtn');
+			const menuButton = document.getElementById('menuButton');
 			const sidebar = document.getElementById('sidebar');
 			const overlay = document.getElementById('overlay');
 			function toggleMenu() {
 				sidebar.classList.toggle('active');
 				overlay.classList.toggle('active');
 			}
-			menuBtn.addEventListener('click', toggleMenu);
+			menuButton.addEventListener('click', toggleMenu);
 			overlay.addEventListener('click', toggleMenu);
-
-			const themeBtn = document.getElementById('themeBtn');
+			const themeButton = document.getElementById('themeButton');
 			const currentTheme = localStorage.getItem('theme');
 			if (currentTheme) {
 				document.documentElement.setAttribute('data-theme', currentTheme);
-				themeBtn.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+				themeButton.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
 			}
-			themeBtn.addEventListener('click', () => {
+			themeButton.addEventListener('click', () => {
 				let theme = document.documentElement.getAttribute('data-theme');
 				
 				if (theme === 'dark') {
 					document.documentElement.removeAttribute('data-theme');
 					localStorage.setItem('theme', 'light');
-					themeBtn.textContent = '🌙';
+					themeButton.textContent = '🌙';
 				} else {
 					document.documentElement.setAttribute('data-theme', 'dark');
 					localStorage.setItem('theme', 'dark');
-					themeBtn.textContent = '☀️';
+					themeButton.textContent = '☀️';
 				}
 			});
-
 			const userProfile = document.getElementById('userProfile');
 			const loginLink = document.getElementById('loginLink');
 			const pointsDisplay = document.getElementById('pointsDisplay');
-			const logoutBtn = document.getElementById('logoutBtn');
+			const logoutButton = document.getElementById('logoutButton');
 			const currentUser = localStorage.getItem('valarUser');
 			if (currentUser) {
 				loginLink.style.display = 'none';
@@ -97,7 +140,7 @@
 				loginLink.style.display = 'block';
 				userProfile.style.display = 'none';
 			}
-			logoutBtn.addEventListener('click', () => {
+			logoutButton.addEventListener('click', () => {
 				localStorage.removeItem('valarUser');
 				location.reload(); 
 			});

@@ -8,7 +8,6 @@
 	--shadow: rgba(0, 0, 0, 0.1);
 }
 
-
 [data-theme="dark"] {
 	--bg-color: #121824;
 	--text-color: #f3f4f6;
@@ -95,6 +94,12 @@ body {
 	text-decoration: none;
 	color: var(--text-color);
 	font-weight: bold;
+}
+
+.topbar-links {
+	display: flex;
+	align-items: center;
+	gap: 20px;
 }
 
 .theme-button {
