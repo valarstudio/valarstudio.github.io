@@ -116,10 +116,12 @@
 .index-sub-menu {
 	margin-top: 12px;
 	padding-left: 15px !important;
-	border-left: 1px solid var(--border-color);
 	display: flex;
 	flex-direction: column;
-	gap: 8px !important;
+}
+
+.index-sub-top {
+	margin-top: 10px;
 }
 
 .index-sub-link {
