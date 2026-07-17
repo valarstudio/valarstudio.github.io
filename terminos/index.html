@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta property="og:title" content="Valar Studio"/>
+		<meta property="og:description" content="Peluches y llaveros personalizados. Explora nuestro mundo y forma parte del Santuario."/>
+		<meta property="og:image" content="https://valarstudio.github.io/images/logo.png"/>
+		<meta property="og:url" content="https://valarstudio.github.io"/>
+		<meta property="og:type" content="website"/>
+		<title>Valar Studio</title>
+		<link rel="icon" type="image/x-icon" href="https://valarstudio.github.io/images/icon.png">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://valarstudio.github.io/global/variables.css">
+	</head>
+	<body>
+		<div class="overlay" id="overlay"></div>
+		<aside class="sidebar" id="sidebar">
+			<nav class="sidebar-links">
+				<a href="https://valarstudio.github.io/catalogo">Catálogo</a>
+				<a href="https://valarstudio.github.io/novedades">Novedades</a>
+				<a href="https://valarstudio.github.io/comunidad">Comunidad</a>
+			</nav>
+		</aside>
+		<nav class="topbar">
+			<div class="topbar-left">
+				<button class="topbar-menu-button" id="menuButton">☰</button>
+				<a href="https://valarstudio.github.io">
+					<img src="https://valarstudio.github.io/images/logonobg.png" alt="Valar Studio" class="topbar-logo">
+				</a>
+				<div class="topbar-links">
+					<a href="https://valarstudio.github.io/catalogo">Catálogo</a>
+					<a href="https://valarstudio.github.io/novedades">Novedades</a>
+					<a href="https://valarstudio.github.io/comunidad">Comunidad</a>
+				</div>
+				<button class="theme-button" id="themeButton" aria-label="Cambiar tema">🌙</button>
+			</div>
+			<div class="topbar-center"></div>
+			<div class="topbar-right">
+				<div class="user-profile" id="userProfile" style="display: none;">
+					<a href="https://valarstudio.github.io/puntos" class="profile-link" aria-label="Ir a mis puntos">
+						<div class="user-profile-text">
+							<span class="username-display" id="usernameDisplay">Bienvenido</span>
+							<span class="points-display" id="pointsDisplay">Calculando...</span>
+						</div>
+						<img src="https://valarstudio.github.io/images/icon.png" alt="Perfil" class="profile-pic">
+					</a>
+					<button class="logout-button" id="logoutButton" title="Cerrar sesión">✖</button>
+				</div>
+				<a href="https://valarstudio.github.io/puntos" class="login-link" id="loginLink">Ingresar</a>
+			</div>
+		</nav>
+		<section class="document-section">
+			<div class="document-card">
+				<div class="document-layout">
+					<article class="document-content">
+						<h1 class="document-title">Términos y Condiciones</h1>
+						<p class="document-updated">Última actualización: Julio 2026</p>
+						<div class="document-block" id="introduccion">
+							<h2>1. Introducción</h2>
+							<p>Bienvenido al entorno digital de Valar Studio. Al acceder a nuestro catálogo y participar en nuestras dinámicas...</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+						</div>
+						<div class="document-block" id="compras-devoluciones">
+							<h2>2. Compras y devoluciones</h2>
+							<p>Los puntos Valar son una recompensa directa por tu interacción con el entorno digital...</p>
+							<ul>
+								<li>Los puntos no son transferibles.</li>
+								<li>Se otorgan mediante la validación en Google Sheets.</li>
+							</ul>
+							<p>Más texto explicativo detallando las reglas exactas de cómo reclamarlos.</p>
+						</div>
+						<div class="document-block" id="coleccionables">
+							<h2>3. Coleccionables Físicos y Digitales</h2>
+							<p>Cada pieza física está vinculada a nuestro ecosistema...</p>
+							<p>Explicación sobre los Gaussian Splats y la representación 3D del catálogo.</p>
+						</div>
+						<div class="document-block" id="privacidad">
+							<h2>4. Privacidad de Datos</h2>
+							<p>Solo recopilamos la información estrictamente necesaria para gestionar tus Puntos Valar y envíos...</p>
+						</div>
+					</article>
+					<aside class="document-sidebar">
+						<div class="index-nav">
+							<h3>Contenido</h3>
+							<nav class="index-menu">
+								<ul>
+									<li>
+										<a href="#introduccion" class="index-link">1. Introducción</a>
+									</li>
+									<li>
+										<a href="#compras-devoluciones" class="index-link">2. Compras y Devoluciones</a>
+										<ul class="index-sub-menu">
+											<li><a href="#devoluciones-garantia" class="index-sub-link">2.1 Garantía de Reparación</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#comunidad-valar" class="index-link">3. Comunidad Valar</a>
+										<ul class="index-sub-menu">
+											<li><a href="#misiones" class="index-sub-link">3.1 Misiones</a></li>
+											<li><a href="#recompensas" class="index-sub-link">3.2 Recompensas</a></li>
+										</ul>
+									</li>
+									<li>
+										<a href="#promociones" class="index-link">4. Promociones</a>
+									</li>
+									<li>
+										<a href="#comisiones" class="index-link">5. Comisiones</a>
+									</li>
+									<li>
+										<a href="#privacidad" class="index-link">6. Privacidad de Datos</a>
+										<ul class="index-sub-menu">
+											<li><a href="#privacidad-recopilacion" class="index-sub-link">6.1 Recopilación</a></li>
+											<li><a href="#privacidad-uso" class="index-sub-link">6.2 Finalidad y Uso</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</section>
+		<footer class="main-footer">
+			<div class="footer-container">
+				<div class="footer-socials">
+					<a href="https://instagram.com/valar.mx" target="_blank" rel="noopener" aria-label="Instagram de Valar Studio">
+						<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+							<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+							<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+						</svg>
+					</a>
+					<a href="https://tiktok.com/@valar.mx" target="_blank" rel="noopener" aria-label="TikTok de Valar Studio">
+						<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+						</svg>
+					</a>
+					<a href="https://github.com/valarstudio" target="_blank" rel="noopener" aria-label="GitHub de Valar Studio">
+						<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+						</svg>
+					</a>
+				</div>
+				<div class="footer-links">
+					<a href="https://valarstudio.github.io/terminos" class="footer-link">Términos</a>
+					<span class="footer-separator">•</span>
+					<a href="mailto:valarstudiomx@gmail.com" class="footer-link">Contacto</a>
+				</div>
+				<div class="footer-copy">
+					<p>© 2026 Valar Studio</p>
+				</div>
+			</div>
+		</footer>
+		<script>
+			const menuButton = document.getElementById('menuButton');
+			const sidebar = document.getElementById('sidebar');
+			const overlay = document.getElementById('overlay');
+			function toggleMenu() {
+				sidebar.classList.toggle('active');
+				overlay.classList.toggle('active');
+			}
+			menuButton.addEventListener('click', toggleMenu);
+			overlay.addEventListener('click', toggleMenu);
+			const themeButton = document.getElementById('themeButton');
+			const currentTheme = localStorage.getItem('theme');
+			if (currentTheme) {
+				document.documentElement.setAttribute('data-theme', currentTheme);
+				themeButton.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+			}
+			themeButton.addEventListener('click', () => {
+				let theme = document.documentElement.getAttribute('data-theme');
+				
+				if (theme === 'dark') {
+					document.documentElement.removeAttribute('data-theme');
+					localStorage.setItem('theme', 'light');
+					themeButton.textContent = '🌙';
+				} else {
+					document.documentElement.setAttribute('data-theme', 'dark');
+					localStorage.setItem('theme', 'dark');
+					themeButton.textContent = '☀️';
+				}
+			});
+			const userProfile = document.getElementById('userProfile');
+			const loginLink = document.getElementById('loginLink');
+			const pointsDisplay = document.getElementById('pointsDisplay');
+			const logoutButton = document.getElementById('logoutButton');
+			const currentUser = localStorage.getItem('valarUser');
+			if (currentUser) {
+				loginLink.style.display = 'none';
+				userProfile.style.display = 'flex';
+			} else {
+				loginLink.style.display = 'block';
+				userProfile.style.display = 'none';
+			}
+			logoutButton.addEventListener('click', () => {
+				localStorage.removeItem('valarUser');
+				location.reload(); 
+			});
+		</script>
+		<script src="https://valarstudio.github.io/api.js"></script>
+</body>
+</html>
