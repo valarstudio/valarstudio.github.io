@@ -50,11 +50,17 @@
 	color: var(--text-color);
 }
 
+.document-block h3 {
+	margin-top: 30px;
+	margin-bottom: 10px;
+	color: var(--text-color);
+}
+
 .document-block p, .document-block ul {
 	font-size: 1rem;
 	line-height: 1.8;
 	color: var(--text-secondary);
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 .document-block ul {
