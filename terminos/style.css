@@ -58,7 +58,7 @@
 .document-block p, .document-block ul {
 	font-size: 1rem;
 	line-height: 1.8;
-	color: var(--text-secondary);
+	color: var(--text-third);
 	margin-bottom: 15px;
 }
 

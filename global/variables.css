@@ -1,7 +1,8 @@
 :root {
 	--bg-color: #00ccff;
-	--text-color: #333333;
+	--text-color: #303030;
 	--text-secondary: #555555;
+	--text-third: #424242;
 	--navbar-bg: #effdff;
 	--card-bg: rgba(255, 255, 255, 0.9);
 	--border-color: #eeeeee;
@@ -12,6 +13,7 @@
 	--bg-color: #121824;
 	--text-color: #f3f4f6;
 	--text-secondary: #9ca3af;
+	--text-third: #dce0e6;
 	--navbar-bg: #1e293b;
 	--card-bg: rgba(30, 41, 59, 0.9);
 	--border-color: #334155;
