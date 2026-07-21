@@ -70,6 +70,20 @@
 	margin-bottom: 10px;
 }
 
+.document-block-link {
+	font-size: 1rem;
+	line-height: 1.8;
+	color: var(--text-secondary);
+	margin-bottom: 15px;
+	text-decoration: none;
+	transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.document-block-link:hover {
+	color: #00d2ff;
+	transform: translateX(4px);
+}
+
 .index-nav {
 	border-left: 2px solid var(--border-color);
 	padding-left: 20px;
